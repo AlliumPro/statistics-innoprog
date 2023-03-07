@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import QMessageBox
 from Codes.window import Window
 
 class Authorization(Window):
-    database = {"Allium": 'Allium'}
+    database = {"Allium": 'Allium', '':''}
 
     def __init__(self):
         super().__init__('Authorization', r'Designs\Authorization.ui')
