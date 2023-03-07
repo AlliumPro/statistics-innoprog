@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1011</width>
+    <height>794</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Rubik</family>
+    <pointsize>-1</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Attendance</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font-family: Rubik;
+	font-size: 16px;
+	font-weight: 600;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Rubik</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 5px;
+border-color: rgb(156, 120, 255);
+border-radius: 15px;</string>
+      </property>
+      <property name="text">
+       <string>Attendance</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Rubik</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>From</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCalendarWidget" name="calendarFrom">
+          <property name="styleSheet">
+           <string notr="true">/*
+  Git Repo: https://github.com/Russian60/flex-calendar
+*/
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'helvetica neue';
+  background-color: #A25200;
+  margin: 0;
+}
+
+h1 {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size:40px;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 300;
+}
+
+span.l {
+  font-weight: 100;
+}
+
+span.r {
+    font-weight: 500;
+}
+
+.wrapp {
+  width: 450px;
+  height: 75%;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+}
+
+flex-calendar {
+   
+}
+
+
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateFrom"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>Rubik</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>To</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCalendarWidget" name="calendarTo"/>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateTo"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="attendanceTable">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget{
+border-radius: 10px}</string>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>223</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Username</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="searchAttendance">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color: rgb(156, 120, 255);
+border-radius: 15px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+background-color:rgb(170, 145, 204);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+QPushButton:pressed {
+background-color:rgb(125, 96, 204);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignLeft">
+     <widget class="QPushButton" name="backToMenu">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:rgb(156, 120, 255);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+
+QPushButton:hover {
+background-color:rgb(170, 145, 204);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+QPushButton:pressed {
+background-color:rgb(125, 96, 204);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Back to Menu</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
