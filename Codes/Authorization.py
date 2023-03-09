@@ -2,8 +2,9 @@ from PyQt6.QtWidgets import QMessageBox
 
 from Codes.window import Window
 
+
 class Authorization(Window):
-    database = {"Allium": 'Allium', '':''}
+    database = {"Allium": 'Allium', '': ''}
 
     def __init__(self):
         super().__init__('Authorization', r'Designs\Authorization.ui')
@@ -25,7 +26,7 @@ class Authorization(Window):
             dlg.exec()
 
     def callForAccess(self):
-        if len(self.form.textPassword.text())<6:
+        if len(self.form.textPassword.text()) < 6:
             dlg = QMessageBox()
             dlg.setWindowTitle("Error")
             dlg.setText("Your password must be at least 6 symbols")

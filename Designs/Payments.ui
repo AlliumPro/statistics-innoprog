@@ -20,6 +20,12 @@
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QLabel" name="labelPayments">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Payments</string>
       </property>
@@ -42,8 +48,28 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QLineEdit" name="enterid">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string/>
+            </property>
+            <property name="frame">
+             <bool>false</bool>
             </property>
             <property name="placeholderText">
              <string>id/username</string>
@@ -52,6 +78,50 @@
           </item>
           <item>
            <widget class="QPushButton" name="addButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Rubik</family>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+background-color: rgb(156, 120, 255);
+border-radius: 5px;
+	color: rgb(255, 255, 255);
+font-family: 'Rubik';
+}
+QPushButton:hover {
+background-color:rgb(170, 145, 204);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+
+}
+QPushButton:pressed {
+background-color:rgb(125, 96, 204);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+
+}
+
+</string>
+            </property>
             <property name="text">
              <string>+</string>
             </property>
@@ -59,6 +129,52 @@
           </item>
           <item>
            <widget class="QPushButton" name="removeButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Rubik</family>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+background-color: rgb(156, 120, 255);
+border-radius: 5px;
+	color: rgb(255, 255, 255);
+font-family: 'Rubik';
+}
+QPushButton:hover {
+background-color:rgb(170, 145, 204);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+
+}
+QPushButton:pressed {
+background-color:rgb(125, 96, 204);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+
+}
+
+
+</string>
+            </property>
             <property name="text">
              <string>-</string>
             </property>
@@ -68,30 +184,44 @@
         </item>
         <item>
          <widget class="QTableWidget" name="resultTable">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <column>
            <property name="text">
-            <string>New Column</string>
+            <string>user_id</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>userid</string>
+            <string>username</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>payment/mo</string>
+            <string>payment</string>
            </property>
           </column>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="resultProfit">
+          <property name="font">
+           <font>
+            <family>Arial Black</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="layoutDirection">
            <enum>Qt::LeftToRight</enum>
           </property>
           <property name="text">
-           <string>0,00 р</string>
+           <string>0.00 р</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -104,7 +234,7 @@
        <widget class="QTableWidget" name="searchTable">
         <column>
          <property name="text">
-          <string>userid</string>
+          <string>user_id</string>
          </property>
         </column>
         <column>
@@ -118,6 +248,50 @@
     </item>
     <item>
      <widget class="QPushButton" name="backToMenu">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:rgb(156, 120, 255);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+
+QPushButton:hover {
+background-color:rgb(170, 145, 204);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+QPushButton:pressed {
+background-color:rgb(125, 96, 204);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+
+}
+
+
+</string>
+      </property>
       <property name="text">
        <string>Back to Menu</string>
       </property>

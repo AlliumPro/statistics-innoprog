@@ -8,7 +8,6 @@ class Menu(Window):
         self.form.attendance.clicked.connect(self.showAttendance)
         self.form.payments.clicked.connect(self.showPayments)
 
-
     def showAttendance(self):
         Window.windows['Attendance']['window'].show()
         self.hide()

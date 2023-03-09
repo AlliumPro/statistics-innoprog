@@ -1,7 +1,7 @@
 import psycopg2
 import datetime
 
-
+COST = 4900
 class Database:
     def __init__(self):
         self.db = psycopg2.connect(database='innoprog', user='readonly', password='readonly', host='94.103.93.208',
@@ -24,8 +24,30 @@ class Database:
         if filter ==None:
             return result
         for user in result:
-            if filter in str(user[0]) or user[1] is not None and filter in user[1] :
+            if filter.lower() in str(user[0]).lower() or user[1] is not None and filter.lower() in user[1].lower() :
                 result1+=[user]
         return result1
+
+    def getPaymentInfo(self, id = None, username = None):
+        if id is not None:
+            self.cursor.execute(f'SELECT id, username, rank FROM client WHERE id = {id};')
+        elif username is not None:
+            self.cursor.execute(f"SELECT id, username, rank FROM client WHERE username = '{username}';")
+        else:
+            raise Exception('Type username or id')
+
+        user = self.cursor.fetchone()
+        if len(user) == 0:
+            raise Exception('No data found')
+
+        self.cursor.execute(f"SELECT discount FROM rank WHERE name = '{user[2]}';")
+        discount=self.cursor.fetchone()[0] # (3,) tuple
+        payment=COST*(1-discount*0.01)
+        return user[0], user[1], payment
+
+
+
+
+
 
 
