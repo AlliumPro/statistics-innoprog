@@ -83,6 +83,7 @@ class Payments(Window):
             for row in range(row_count):
                 if id == int(self.form.resultTable.item(row, 0).text()):
                     self.form.resultTable.removeRow(row)
+                    break
 
             profit -= payment
             self.form.resultProfit.setText(str(profit) + ' р')

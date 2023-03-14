@@ -7,6 +7,7 @@ class Menu(Window):
         super().__init__("Menu", "Designs\Menu.ui")
         self.form.attendance.clicked.connect(self.showAttendance)
         self.form.payments.clicked.connect(self.showPayments)
+        self.form.logOutButton.clicked.connect(self.logOut)
 
     def showAttendance(self):
         Window.windows['Attendance']['window'].show()
@@ -16,3 +17,8 @@ class Menu(Window):
         Window.windows['Payments']['window'].show()
         Window.windows['Payments']['object'].search()
         self.hide()
+
+    def logOut(self):
+        Window.windows['Authorization']['window'].show()
+        self.hide()
+

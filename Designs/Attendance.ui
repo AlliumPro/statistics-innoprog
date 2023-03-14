@@ -46,7 +46,8 @@
       <property name="styleSheet">
        <string notr="true">border: 5px;
 border-color: rgb(156, 120, 255);
-border-radius: 15px;</string>
+border-radius: 15px;
+font-family: Rubik;</string>
       </property>
       <property name="text">
        <string>Attendance</string>

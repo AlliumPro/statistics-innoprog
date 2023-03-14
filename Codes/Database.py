@@ -45,6 +45,15 @@ class Database:
         payment=COST*(1-discount*0.01)
         return user[0], user[1], payment
 
+    def getAuthorizationInfo(self, login, password):
+        if login and password:
+            self.cursor.execute(f"SELECT username, id, name FROM teacher WHERE id = {password} AND username = '{login}';")
+            user=self.cursor.fetchone()
+            return user
+        else:
+            return None
+
+
 
 
 
