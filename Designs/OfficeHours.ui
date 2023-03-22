@@ -158,21 +158,11 @@
         <item>
          <widget class="QComboBox" name="yearList">
           <property name="insertPolicy">
-           <enum>QComboBox::InsertAtCurrent</enum>
+           <enum>QComboBox::InsertBeforeCurrent</enum>
           </property>
           <property name="frame">
            <bool>true</bool>
           </property>
-          <item>
-           <property name="text">
-            <string>2023</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>2022</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>
