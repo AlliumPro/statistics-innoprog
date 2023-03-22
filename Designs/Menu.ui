@@ -30,7 +30,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Arial Black</family>
+    <family>OCR A Extended</family>
    </font>
   </property>
   <property name="windowTitle">
@@ -43,16 +43,33 @@
    <widget class="QLabel" name="MenuLabel">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>0</x>
       <y>10</y>
-      <width>97</width>
-      <height>46</height>
+      <width>801</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1000</width>
+      <height>16777215</height>
+     </size>
     </property>
     <property name="font">
      <font>
-      <family>Arial Black</family>
-      <pointsize>25</pointsize>
+      <family>OCR A Extended</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
      </font>
     </property>
     <property name="layoutDirection">
@@ -74,24 +91,18 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>70</y>
+      <x>21</x>
+      <y>71</y>
       <width>252</width>
-      <height>201</height>
+      <height>190</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <property name="spacing">
-      <number>0</number>
-     </property>
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
-     </property>
-     <property name="leftMargin">
-      <number>0</number>
+      <number>15</number>
      </property>
      <item>
       <widget class="QPushButton" name="attendance">
@@ -103,16 +114,23 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>150</width>
+         <width>200</width>
          <height>50</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 background-color: rgb(156, 120, 255);
 border-radius: 15px;
 	color: rgb(255, 255, 255);
-font-family: 'Rubik';
 }
 QPushButton:hover {
 background-color:rgb(170, 145, 204);
@@ -144,12 +162,20 @@ border-color: rgb(255, 255, 255);
          <height>50</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 background-color: rgb(156, 120, 255);
 border-radius: 15px;
 	color: rgb(255, 255, 255);
-font-family: 'Rubik';
 }
 QPushButton:hover {
 background-color:rgb(170, 145, 204);
@@ -179,12 +205,19 @@ color: rgb(255, 255, 255);
          <height>50</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
 background-color: rgb(156, 120, 255);
 border-radius: 15px;
 	color: rgb(255, 255, 255);
-font-family: 'Rubik';
 }
 QPushButton:hover {
 background-color:rgb(170, 145, 204);
@@ -208,99 +241,142 @@ color: rgb(255, 255, 255);
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>440</y>
-      <width>491</width>
-      <height>131</height>
+      <x>12</x>
+      <y>360</y>
+      <width>781</width>
+      <height>234</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../ss.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="logOutButton">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>540</y>
-      <width>150</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>150</width>
-      <height>12</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="helloMessage">
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>Hello</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>491</width>
+         <height>131</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>491</width>
+         <height>131</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../ss.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="logOutButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>OCR A Extended</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
 background-color: rgb(156, 156, 156);
-border-radius: 15px;
+border-radius: 10px;
 	color: rgb(255, 255, 255);
-font-family: 'Rubik';
 }
 QPushButton:hover {
 background-color:rgb(170, 145, 204);
-border-radius: 15px;
+border-radius: 10px;
 color: rgb(255, 255, 255);
 
 }
 QPushButton:pressed {
 background-color:rgb(125, 96, 204);
-border-radius: 15px;
+border-radius: 10px;
 color: rgb(255, 255, 255);
 
 }
 
 
 </string>
-    </property>
-    <property name="text">
-     <string>Log out</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="helloMessage">
-    <property name="geometry">
-     <rect>
-      <x>35</x>
-      <y>400</y>
-      <width>761</width>
-      <height>38</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;</string>
-    </property>
-    <property name="text">
-     <string>Hello</string>
-    </property>
+         </property>
+         <property name="text">
+          <string>Log out</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="../ава.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

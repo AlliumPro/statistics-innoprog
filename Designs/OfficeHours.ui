@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>802</width>
     <height>600</height>
    </rect>
   </property>
@@ -22,8 +22,10 @@
      <widget class="QLabel" name="officehourslabel">
       <property name="font">
        <font>
-        <family>Arial Black</family>
-        <pointsize>12</pointsize>
+        <family>OCR A Extended</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
@@ -38,6 +40,12 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QComboBox" name="teacherList">
+        <property name="font">
+         <font>
+          <family>OCR A Extended</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="frame">
          <bool>true</bool>
         </property>
@@ -47,6 +55,11 @@
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <spacer name="horizontalSpacer">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+           </font>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -63,6 +76,12 @@
         </item>
         <item>
          <widget class="QRadioButton" name="allButton">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>All</string>
           </property>
@@ -70,6 +89,12 @@
         </item>
         <item>
          <widget class="QRadioButton" name="byMonthButton">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>By month</string>
           </property>
@@ -81,6 +106,12 @@
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QComboBox" name="monthList">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true"/>
           </property>
@@ -157,6 +188,12 @@
         </item>
         <item>
          <widget class="QComboBox" name="yearList">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="insertPolicy">
            <enum>QComboBox::InsertBeforeCurrent</enum>
           </property>
@@ -169,6 +206,11 @@
       </item>
       <item>
        <spacer name="horizontalSpacer_2">
+        <property name="font">
+         <font>
+          <family>OCR A Extended</family>
+         </font>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -185,6 +227,12 @@
       </item>
       <item>
        <widget class="QCheckBox" name="withoutRecButton">
+        <property name="font">
+         <font>
+          <family>OCR A Extended</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Only without recordings</string>
         </property>
@@ -194,6 +242,11 @@
     </item>
     <item>
      <spacer name="verticalSpacer">
+      <property name="font">
+       <font>
+        <family>OCR A Extended</family>
+       </font>
+      </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -210,24 +263,74 @@
     </item>
     <item>
      <widget class="QTableWidget" name="resultTable">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>OCR A Extended</family>
+       </font>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>165</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
       <column>
        <property name="text">
         <string>time</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>client_id</string>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>client_username</string>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>recording</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
       </column>
      </widget>
@@ -245,6 +348,11 @@
         <width>150</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>OCR A Extended</family>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {

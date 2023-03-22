@@ -6,14 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1011</width>
-    <height>794</height>
+    <width>951</width>
+    <height>766</height>
    </rect>
   </property>
   <property name="font">
    <font>
     <family>Rubik</family>
-    <pointsize>-1</pointsize>
     <weight>75</weight>
     <bold>true</bold>
    </font>
@@ -25,29 +24,22 @@
    <string>Attendance</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-	font-family: Rubik;
-	font-size: 16px;
-	font-weight: 600;
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="attendanceLabel">
       <property name="font">
        <font>
-        <family>Rubik</family>
-        <pointsize>-1</pointsize>
+        <family>OCR A Extended</family>
+        <pointsize>20</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">border: 5px;
-border-color: rgb(156, 120, 255);
-border-radius: 15px;
-font-family: Rubik;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Attendance</string>
@@ -68,8 +60,8 @@ font-family: Rubik;</string>
          <widget class="QLabel" name="label_2">
           <property name="font">
            <font>
-            <family>Rubik</family>
-            <pointsize>-1</pointsize>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -81,69 +73,64 @@ font-family: Rubik;</string>
         </item>
         <item>
          <widget class="QCalendarWidget" name="calendarFrom">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
           <property name="styleSheet">
-           <string notr="true">/*
-  Git Repo: https://github.com/Russian60/flex-calendar
-*/
-* {
-  -webkit-font-smoothing: antialiased;
+           <string notr="true">QCalendarWidget QMenu:{
+background-color: rgb(0, 0, 0);
 }
-
-body {
-  font-family: 'helvetica neue';
-  background-color: #A25200;
-  margin: 0;
-}
-
-h1 {
-  color: #FFFFFF;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 0px;
-  font-size:40px;
-}
-
-p {
-  margin-top: 5px;
-  margin-bottom: 25px;
-  color: #fff;
-  font-weight: 300;
-}
-
-span.l {
-  font-weight: 100;
-}
-
-span.r {
-    font-weight: 500;
-}
-
-.wrapp {
-  width: 450px;
-  height: 75%;
-  margin: 0 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-p {
-  text-align: center;
-}
-
-flex-calendar {
-   
-}
-
-
 </string>
+          </property>
+          <property name="locale">
+           <locale language="English" country="UnitedKingdom"/>
+          </property>
+          <property name="minimumDate">
+           <date>
+            <year>2021</year>
+            <month>9</month>
+            <day>14</day>
+           </date>
+          </property>
+          <property name="gridVisible">
+           <bool>true</bool>
+          </property>
+          <property name="horizontalHeaderFormat">
+           <enum>QCalendarWidget::ShortDayNames</enum>
+          </property>
+          <property name="verticalHeaderFormat">
+           <enum>QCalendarWidget::NoVerticalHeader</enum>
+          </property>
+          <property name="navigationBarVisible">
+           <bool>true</bool>
+          </property>
+          <property name="dateEditEnabled">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QDateEdit" name="dateFrom"/>
+         <widget class="QDateEdit" name="dateFrom">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -153,8 +140,8 @@ flex-calendar {
          <widget class="QLabel" name="label_3">
           <property name="font">
            <font>
-            <family>Rubik</family>
-            <pointsize>-1</pointsize>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -165,10 +152,44 @@ flex-calendar {
          </widget>
         </item>
         <item>
-         <widget class="QCalendarWidget" name="calendarTo"/>
+         <widget class="QCalendarWidget" name="calendarTo">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="locale">
+           <locale language="English" country="UnitedKingdom"/>
+          </property>
+          <property name="minimumDate">
+           <date>
+            <year>2021</year>
+            <month>9</month>
+            <day>14</day>
+           </date>
+          </property>
+          <property name="gridVisible">
+           <bool>true</bool>
+          </property>
+          <property name="verticalHeaderFormat">
+           <enum>QCalendarWidget::NoVerticalHeader</enum>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QDateEdit" name="dateTo"/>
+         <widget class="QDateEdit" name="dateTo">
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -182,6 +203,14 @@ flex-calendar {
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="font">
+       <font>
+        <family>Rubik</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">QTableWidget{
 border-radius: 10px}</string>
@@ -193,7 +222,7 @@ border-radius: 10px}</string>
        <bool>false</bool>
       </property>
       <attribute name="horizontalHeaderVisible">
-       <bool>true</bool>
+       <bool>false</bool>
       </attribute>
       <attribute name="horizontalHeaderCascadingSectionResizes">
        <bool>false</bool>
@@ -220,15 +249,33 @@ border-radius: 10px}</string>
        <property name="text">
         <string>ID</string>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Username</string>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Date</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>13</pointsize>
+        </font>
        </property>
       </column>
      </widget>
@@ -240,6 +287,14 @@ border-radius: 10px}</string>
         <width>100</width>
         <height>50</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>OCR A Extended</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
@@ -282,6 +337,14 @@ color: rgb(255, 255, 255);
         <height>50</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <family>OCR A Extended</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
 background-color:rgb(156, 120, 255);
@@ -313,7 +376,6 @@ color: rgb(255, 255, 255);
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

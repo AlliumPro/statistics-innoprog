@@ -28,7 +28,7 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -42,6 +42,11 @@
       <width>891</width>
       <height>386</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OCR A Extended</family>
+     </font>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -60,8 +65,10 @@
        </property>
        <property name="font">
         <font>
-         <family>Arial Black</family>
+         <family>OCR A Extended</family>
          <pointsize>25</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -101,6 +108,12 @@
          <height>50</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
        <property name="contextMenuPolicy">
         <enum>Qt::PreventContextMenu</enum>
        </property>
@@ -134,6 +147,12 @@
          <width>16777215</width>
          <height>50</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+         <pointsize>16</pointsize>
+        </font>
        </property>
        <property name="contextMenuPolicy">
         <enum>Qt::PreventContextMenu</enum>
@@ -170,16 +189,17 @@
          </property>
          <property name="font">
           <font>
-           <family>Rubik</family>
-           <pointsize>12</pointsize>
+           <family>OCR A Extended</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
 background-color: rgb(156, 120, 255);
 border-radius: 15px;
-	color: rgb(255, 255, 255);
-font-family: 'Rubik';
+	color: rgb(255, 255, 255)
 }
 QPushButton:hover {
 background-color:rgb(170, 145, 204);
@@ -213,8 +233,10 @@ border-color: rgb(255, 255, 255);
          </property>
          <property name="font">
           <font>
-           <family>Rubik</family>
+           <family>OCR A Extended</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -222,7 +244,6 @@ border-color: rgb(255, 255, 255);
 background-color: rgb(156, 120, 255);
 border-radius: 15px;
 	color: rgb(255, 255, 255);
-font-family: 'Rubik';
 }
 QPushButton:hover {
 background-color:rgb(170, 145, 204);
@@ -242,7 +263,7 @@ border-color: rgb(255, 255, 255);
 </string>
          </property>
          <property name="text">
-          <string>Call for access</string>
+          <string>Useless at the moment</string>
          </property>
         </widget>
        </item>
@@ -250,6 +271,11 @@ border-color: rgb(255, 255, 255);
      </item>
      <item>
       <widget class="QLineEdit" name="textAnswer">
+       <property name="font">
+        <font>
+         <family>OCR A Extended</family>
+        </font>
+       </property>
        <property name="frame">
         <bool>false</bool>
        </property>
@@ -269,6 +295,11 @@ border-color: rgb(255, 255, 255);
       <height>131</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>OCR A Extended</family>
+     </font>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -280,7 +311,6 @@ border-color: rgb(255, 255, 255);
     </property>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

@@ -28,8 +28,10 @@
       </property>
       <property name="font">
        <font>
-        <family>Arial Black</family>
-        <pointsize>12</pointsize>
+        <family>OCR A Extended</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
@@ -68,6 +70,7 @@
             </property>
             <property name="font">
              <font>
+              <family>OCR A Extended</family>
               <pointsize>12</pointsize>
              </font>
             </property>
@@ -99,9 +102,6 @@
             <property name="font">
              <font>
               <family>Rubik</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -150,10 +150,6 @@ border-color: rgb(255, 255, 255);
             <property name="font">
              <font>
               <family>Rubik</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <italic>false</italic>
-              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -196,19 +192,43 @@ border-color: rgb(255, 255, 255);
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="font">
+           <font>
+            <family>OCR A Extended</family>
+           </font>
+          </property>
           <column>
            <property name="text">
             <string>user_id</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>OCR A Extended</family>
+             <pointsize>12</pointsize>
+            </font>
            </property>
           </column>
           <column>
            <property name="text">
             <string>username</string>
            </property>
+           <property name="font">
+            <font>
+             <family>OCR A Extended</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
           </column>
           <column>
            <property name="text">
             <string>payment</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>OCR A Extended</family>
+             <pointsize>12</pointsize>
+             <kerning>true</kerning>
+            </font>
            </property>
           </column>
          </widget>
@@ -217,7 +237,7 @@ border-color: rgb(255, 255, 255);
          <widget class="QLabel" name="resultProfit">
           <property name="font">
            <font>
-            <family>Arial Black</family>
+            <family>OCR A Extended</family>
             <pointsize>12</pointsize>
             <weight>75</weight>
             <bold>true</bold>
@@ -238,14 +258,31 @@ border-color: rgb(255, 255, 255);
       </item>
       <item>
        <widget class="QTableWidget" name="searchTable">
+        <property name="font">
+         <font>
+          <family>OCR A Extended</family>
+         </font>
+        </property>
         <column>
          <property name="text">
           <string>user_id</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>OCR A Extended</family>
+           <pointsize>14</pointsize>
+          </font>
          </property>
         </column>
         <column>
          <property name="text">
           <string>username</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>OCR A Extended</family>
+           <pointsize>14</pointsize>
+          </font>
          </property>
         </column>
        </widget>
@@ -268,7 +305,7 @@ border-color: rgb(255, 255, 255);
       </property>
       <property name="font">
        <font>
-        <family>Arial Black</family>
+        <family>OCR A Extended</family>
         <pointsize>12</pointsize>
         <weight>75</weight>
         <bold>true</bold>
@@ -305,7 +342,6 @@ color: rgb(255, 255, 255);
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
