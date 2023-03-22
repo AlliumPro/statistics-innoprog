@@ -1,4 +1,5 @@
 from PyQt6.QtWidgets import QMessageBox
+from transliterate import translit
 
 from Codes.window import Window
 
@@ -15,9 +16,10 @@ class Authorization(Window):
             if user is not None:
                 Window.windows['Menu']['window'].show()
                 self.hide()
-                f = open(r'C:\Users\фвьшт\PycharmProjects\Statistics\authorizationInfo.txt', 'w', encoding = 'UTF-8')
+                f = open(r'authorizationInfo.txt', 'w', encoding = 'UTF-8')
                 f.write(f'{user[0]}\n{user[1]}\n{user[2]}')
                 f.close()
+                Window.windows['Menu']['form'].helloMessage.setText(f'Hello, {translit(user[2], "ru", reversed = True)}')
             else:
 
                 dlg = QMessageBox()

@@ -54,6 +54,17 @@ class Database:
             return None
 
 
+    def getTeachers(self):
+        self.cursor.execute("SELECT distinct teacher_id FROM office_hours;")
+        teachersID=self.cursor.fetchall()
+        teachers=[]
+        for teacher in teachersID:
+            self.cursor.execute(f"SELECT name FROM teacher WHERE id={teacher[0]};")
+            teachers.append(self.cursor.fetchone()[0])
+        return teachers
+
+
+
 
 
 

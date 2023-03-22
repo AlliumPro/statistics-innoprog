@@ -8,6 +8,7 @@ class Menu(Window):
         self.form.attendance.clicked.connect(self.showAttendance)
         self.form.payments.clicked.connect(self.showPayments)
         self.form.logOutButton.clicked.connect(self.logOut)
+        self.form.officeHoursButton.clicked.connect(self.showOfficeHours)
 
     def showAttendance(self):
         Window.windows['Attendance']['window'].show()
@@ -18,7 +19,16 @@ class Menu(Window):
         Window.windows['Payments']['object'].search()
         self.hide()
 
+    def showOfficeHours(self):
+        Window.windows['OfficeHours']['window'].show()
+        self.hide()
+
+
     def logOut(self):
         Window.windows['Authorization']['window'].show()
         self.hide()
+        with open('authorizationInfo.txt', 'w') as f:
+            f.seek(0)
+            f.write('')
+
 

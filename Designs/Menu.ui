@@ -10,6 +10,29 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial Black</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Menu</string>
   </property>
@@ -20,10 +43,10 @@
    <widget class="QLabel" name="MenuLabel">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>20</y>
-      <width>241</width>
-      <height>51</height>
+      <x>310</x>
+      <y>10</y>
+      <width>97</width>
+      <height>46</height>
      </rect>
     </property>
     <property name="font">
@@ -149,7 +172,7 @@ color: rgb(255, 255, 255);
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="officeHoursButton">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -179,7 +202,7 @@ color: rgb(255, 255, 255);
 </string>
        </property>
        <property name="text">
-        <string>Other</string>
+        <string>Office Hours</string>
        </property>
       </widget>
      </item>
@@ -252,8 +275,29 @@ color: rgb(255, 255, 255);
      <string>Log out</string>
     </property>
    </widget>
+   <widget class="QLabel" name="helloMessage">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>400</y>
+      <width>761</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>Hello</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="../ава.qrc"/>
