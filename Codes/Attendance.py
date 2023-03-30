@@ -1,4 +1,4 @@
-from PyQt6.QtGui import QTextCharFormat, QFont
+
 from PyQt6.QtWidgets import QTableWidgetItem
 
 from Codes.window import Window
