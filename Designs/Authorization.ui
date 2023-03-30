@@ -227,50 +227,6 @@ border-color: rgb(255, 255, 255);
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QPushButton" name="pushAccess">
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>OCR A Extended</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-background-color: rgb(156, 120, 255);
-border-radius: 15px;
-	color: rgb(255, 255, 255);
-}
-QPushButton:hover {
-background-color:rgb(170, 145, 204);
-border-radius: 15px;
-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-
-}
-QPushButton:pressed {
-background-color:rgb(125, 96, 204);
-border-radius: 15px;
-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-
-}
-
-</string>
-         </property>
-         <property name="text">
-          <string>Useless at the moment</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </item>
      <item>

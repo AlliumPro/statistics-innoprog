@@ -8,7 +8,6 @@ class Authorization(Window):
     def __init__(self):
         super().__init__("Authorization", r"Designs\Authorization.ui")
         self.form.pushLogin.clicked.connect(self.login)
-        self.form.pushAccess.clicked.connect(self.callForAccess)
 
     def login(self):
         user = self.db.getAuthorizationInfo(
