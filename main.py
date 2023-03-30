@@ -21,4 +21,6 @@ if filelines and menu.db.getAuthorizationInfo(filelines[0].strip(), filelines[1]
     menu.show()
 else:
     authorization.show()
+
+menu.db.getOfficeHoursByTeacher('Мурзин Иван Александрович')
 win.exec()

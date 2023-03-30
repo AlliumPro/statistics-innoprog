@@ -24,6 +24,10 @@
   <property name="windowTitle">
    <string>Authorization</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../logo.png</normaloff>../logo.png</iconset>
+  </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
@@ -304,7 +308,7 @@ border-color: rgb(255, 255, 255);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../ss.png</pixmap>
+     <pixmap>../../../.designer/ss.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

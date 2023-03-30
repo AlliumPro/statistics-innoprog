@@ -63,6 +63,20 @@ class Database:
             teachers.append(self.cursor.fetchone()[0])
         return teachers
 
+    def getOfficeHoursByTeacher(self, teacher, month = None, year = None):
+        self.cursor.execute(f'''SELECT office_hours."time", client.id, client.username, office_hours.recording 
+        FROM office_hours 
+        JOIN teacher ON office_hours.teacher_id = teacher.id 
+        JOIN purchases ON purchases.id = office_hours.purchases_id 
+        JOIN client ON client.id = purchases.client_id 
+        WHERE teacher.name = '{teacher}';''')
+        result=self.cursor.fetchall()
+        if month is not None or year is not None:
+            return [lesson for lesson in result if lesson[0].month == month+1 and lesson[0].year == year]
+        return result
+
+
+
 
 
 

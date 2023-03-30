@@ -23,6 +23,10 @@
   <property name="windowTitle">
    <string>Attendance</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../logo.png</normaloff>../logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -230,8 +234,11 @@ border-radius: 10px}</string>
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>223</number>
       </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-       <bool>false</bool>
+       <bool>true</bool>
       </attribute>
       <attribute name="horizontalHeaderStretchLastSection">
        <bool>false</bool>
@@ -377,6 +384,8 @@ color: rgb(255, 255, 255);
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../logo.qrc"/>
+ </resources>
  <connections/>
 </ui>
