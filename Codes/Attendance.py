@@ -6,7 +6,7 @@ from Codes.window import Window
 
 class Attendance(Window):
     def __init__(self):
-        super().__init__("Attendance", r'Designs\Attendance.ui')
+        super().__init__("Attendance", r"Designs\Attendance.ui")
         self.calendarFrom()
         self.calendarTo()
         self.form.backToMenu.clicked.connect(self.showBackToMenu)
@@ -17,7 +17,7 @@ class Attendance(Window):
         self.form.dateTo.dateChanged.connect(self.dateChangedTo)
 
     def showBackToMenu(self):
-        Window.windows['Menu']['window'].show()
+        Window.windows["Menu"]["window"].show()
         self.hide()
 
     def search(self):
@@ -29,7 +29,7 @@ class Attendance(Window):
         for i, elem in enumerate(result):
             id = QTableWidgetItem(str(elem[0]))
             username = QTableWidgetItem(elem[1])
-            last_visit = QTableWidgetItem(elem[2].strftime('%d-%m-%y'))
+            last_visit = QTableWidgetItem(elem[2].strftime("%d-%m-%y"))
             self.form.attendanceTable.setItem(i, 0, id)
             if elem[1] is not None:
                 self.form.attendanceTable.setItem(i, 1, username)

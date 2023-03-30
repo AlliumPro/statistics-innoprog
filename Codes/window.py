@@ -12,7 +12,11 @@ class Window:
         self.window = Windows()
         self.form = Form()
         self.form.setupUi(self.window)
-        Window.windows[name] = {'window': self.window, 'form': self.form, 'object': self}
+        Window.windows[name] = {
+            "window": self.window,
+            "form": self.form,
+            "object": self,
+        }
 
     def show(self):
         self.window.show()

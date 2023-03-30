@@ -5,29 +5,31 @@ from Codes.window import Window
 
 
 class Authorization(Window):
-
     def __init__(self):
-        super().__init__('Authorization', r'Designs\Authorization.ui')
+        super().__init__("Authorization", r"Designs\Authorization.ui")
         self.form.pushLogin.clicked.connect(self.login)
         self.form.pushAccess.clicked.connect(self.callForAccess)
 
     def login(self):
-            user=self.db.getAuthorizationInfo(self.form.textLogin.text(), self.form.textPassword.text())
-            if user is not None:
-                Window.windows['Menu']['window'].show()
-                self.hide()
-                f = open(r'authorizationInfo.txt', 'w', encoding = 'UTF-8')
-                f.write(f'{user[0]}\n{user[1]}\n{user[2]}')
-                f.close()
-                Window.windows['Menu']['form'].helloMessage.setText(f'Hello, {translit(user[2], "ru", reversed = True)}')
-            else:
-
-                dlg = QMessageBox()
-                dlg.setWindowTitle("Error")
-                dlg.setText("Access denied")
-                dlg.setStandardButtons(QMessageBox.StandardButton.Close)
-                dlg.setIcon(QMessageBox.Icon.Warning)
-                dlg.exec()
+        user = self.db.getAuthorizationInfo(
+            self.form.textLogin.text(), self.form.textPassword.text()
+        )
+        if user is not None:
+            Window.windows["Menu"]["window"].show()
+            self.hide()
+            f = open(r"authorizationInfo.txt", "w", encoding="UTF-8")
+            f.write(f"{user[0]}\n{user[1]}\n{user[2]}")
+            f.close()
+            Window.windows["Menu"]["form"].helloMessage.setText(
+                f'Hello, {translit(user[2], "ru", reversed = True)}'
+            )
+        else:
+            dlg = QMessageBox()
+            dlg.setWindowTitle("Error")
+            dlg.setText("Access denied")
+            dlg.setStandardButtons(QMessageBox.StandardButton.Close)
+            dlg.setIcon(QMessageBox.Icon.Warning)
+            dlg.exec()
 
     def callForAccess(self):
         if len(self.form.textPassword.text()) < 6:
@@ -45,4 +47,6 @@ class Authorization(Window):
             dlg.setIcon(QMessageBox.Icon.Information)
             dlg.exec()
 
-        Authorization.database[self.form.textLogin.text()] = self.form.textPassword.text()
+        Authorization.database[
+            self.form.textLogin.text()
+        ] = self.form.textPassword.text()
