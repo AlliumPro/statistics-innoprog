@@ -4,10 +4,10 @@ This software was developed by order for INNOPROG Company (Programming school wi
 
 ## Screenshots
 <img src="https://github.com/AlliumPro/statistics-innoprog/blob/master/Screenshots/Authorization.png" alt="Authorization" width="1200"/>
-<img src="https://github.com/rafailvv/aml-faster-rcnn-vs-yolov8/blob/main/examples/annotation_screwdriver.jpg" alt="Annotation Screwdriver" width="1200"/>
-<img src="https://github.com/rafailvv/aml-faster-rcnn-vs-yolov8/blob/main/examples/annotation_screwdriver.jpg" alt="Annotation Screwdriver" width="1200"/>
-<img src="https://github.com/rafailvv/aml-faster-rcnn-vs-yolov8/blob/main/examples/annotation_screwdriver.jpg" alt="Annotation Screwdriver" width="1200"/>
-<img src="https://github.com/rafailvv/aml-faster-rcnn-vs-yolov8/blob/main/examples/annotation_screwdriver.jpg" alt="Annotation Screwdriver" width="1200"/>
+<img src="https://github.com/AlliumPro/statistics-innoprog/blob/master/Screenshots/Menu.png" alt="Menu" width="1200"/>
+<img src="https://github.com/AlliumPro/statistics-innoprog/blob/master/Screenshots/Attendance.png" alt="Attendance" width="1200"/>
+<img src="https://github.com/AlliumPro/statistics-innoprog/blob/master/Screenshots/Payments.png" alt="Payments" width="1200"/>
+<img src="https://github.com/AlliumPro/statistics-innoprog/blob/master/Screenshots/OfficeHours.png" alt="Office Hours" width="1200"/>
 
 ## Frameworks
 Application was created using PyQT6 
