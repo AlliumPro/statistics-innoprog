@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QMessageBox
 from transliterate import translit
 
+from Codes.path import resource_path
 from Codes.window import Window
 
 
@@ -16,7 +17,7 @@ class Authorization(Window):
         if user is not None:
             Window.windows["Menu"]["window"].show()
             self.hide()
-            f = open(r"authorizationInfo.txt", "w", encoding="UTF-8")
+            f = open(resource_path("authorizationInfo.txt"), "w", encoding="UTF-8")
             f.write(f"{user[0]}\n{user[1]}\n{user[2]}")
             f.close()
             Window.windows["Menu"]["form"].helloMessage.setText(
@@ -46,6 +47,6 @@ class Authorization(Window):
             dlg.setIcon(QMessageBox.Icon.Information)
             dlg.exec()
 
-        Authorization.database[
-            self.form.textLogin.text()
-        ] = self.form.textPassword.text()
+        # Authorization.database[
+        #     self.form.textLogin.text()
+        # ] = self.form.textPassword.text()

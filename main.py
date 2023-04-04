@@ -5,18 +5,17 @@ from Codes.Authorization import Authorization
 from Codes.Menu import Menu
 from Codes.OfficeHours import OfficeHours
 from Codes.Payments import Payments
-
+from Codes.path import resource_path
 
 win = QApplication([])
 menu = Menu()
 
-
 def showFirstWindow(authorization):
     try:
-        with open("authorizationInfo.txt", "r", encoding="UTF-8") as f:
+        with open(resource_path("authorizationInfo.txt"), "r", encoding="UTF-8") as f:
             filelines = f.readlines()
     except:
-        open("authorizationInfo.txt", "w")
+        open(resource_path("authorizationInfo.txt"), "w")
         filelines = ""
 
     if (

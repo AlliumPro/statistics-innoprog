@@ -1,4 +1,5 @@
 from Codes.Attendance import Attendance
+from Codes.path import resource_path
 from Codes.window import Window
 
 
@@ -26,6 +27,6 @@ class Menu(Window):
     def logOut(self):
         Window.windows["Authorization"]["window"].show()
         self.hide()
-        with open("authorizationInfo.txt", "w") as f:
+        with open(resource_path("authorizationInfo.txt"), "w") as f:
             f.seek(0)
             f.write("")
