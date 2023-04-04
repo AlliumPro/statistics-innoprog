@@ -1,4 +1,3 @@
-
 from PyQt6.QtWidgets import QTableWidgetItem
 
 from Codes.window import Window

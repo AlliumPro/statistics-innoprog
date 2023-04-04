@@ -10,7 +10,7 @@ class Database:
     def __init__(self):
         load_dotenv()
         self.db = psycopg2.connect(
-            database=os.getenv('DATABASE'),
+            database=os.getenv("DATABASE"),
             user=os.getenv("USER"),
             password=os.getenv("PASSWORD"),
             host=os.getenv("HOST"),

@@ -1,2 +1,4 @@
 python-dotenv==1.0.0
-PyQt6
+PyQt6==6.4.2
+transliterate==1.10.2
+psycopg2==2.9.5
