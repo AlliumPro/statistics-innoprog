@@ -10,6 +10,11 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>OCR A Extended</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Office Hours</string>
   </property>
@@ -43,41 +48,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QComboBox" name="teacherList">
-        <property name="font">
-         <font>
-          <family>OCR A Extended</family>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="frame">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="font">
-           <font>
-            <family>OCR A Extended</family>
-           </font>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>80</width>
-            <height>10</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item>
          <widget class="QRadioButton" name="allButton">
           <property name="font">

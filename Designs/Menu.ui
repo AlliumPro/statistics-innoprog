@@ -38,7 +38,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../logo.png</normaloff>../logo.png</iconset>
+    <normaloff>../Images/logo.png</normaloff>../Images/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -298,7 +298,7 @@ color: rgb(255, 255, 255);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../ss.png</pixmap>
+        <pixmap>../Images/Logo text.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>

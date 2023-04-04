@@ -1,17 +1,20 @@
 import psycopg2
 import datetime
+import os
+from dotenv import load_dotenv
 
 COST = 4900
 
 
 class Database:
     def __init__(self):
+        load_dotenv()
         self.db = psycopg2.connect(
-            database="innoprog",
-            user="readonly",
-            password="readonly",
-            host="94.103.93.208",
-            port=5432,
+            database=os.getenv('DATABASE'),
+            user=os.getenv("USER"),
+            password=os.getenv("PASSWORD"),
+            host=os.getenv("HOST"),
+            port=os.getenv("PORT"),
         )
         self.cursor = self.db.cursor()
 
