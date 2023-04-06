@@ -1,11 +1,12 @@
 from PyQt6.QtWidgets import QMessageBox
-from transliterate import translit
-
+from googletrans import Translator, constants
 from Codes.path import resource_path
 from Codes.window import Window
 
 
 class Authorization(Window):
+
+    translator = Translator()
     def __init__(self):
         super().__init__("Authorization", r"Designs\Authorization.ui")
         self.form.pushLogin.clicked.connect(self.login)
@@ -21,7 +22,7 @@ class Authorization(Window):
             f.write(f"{user[0]}\n{user[1]}\n{user[2]}")
             f.close()
             Window.windows["Menu"]["form"].helloMessage.setText(
-                f'Hello, {translit(user[2], "ru", reversed = True)}'
+                f'Hello, {Authorization.translator.translate(user[2], dest="en").text.replace("Venediktov Rafael Vladimirovich","Venediktov Rafail Vladimirovich")}'
             )
         else:
             dlg = QMessageBox()

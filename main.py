@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QApplication
-from transliterate import translit
+from googletrans import Translator
 from Codes.Attendance import Attendance
 from Codes.Authorization import Authorization
 from Codes.Menu import Menu
@@ -12,6 +12,7 @@ win = QApplication([])
 menu = Menu()
 
 def showFirstWindow(authorization):
+    translator = Translator()
     try:
         with open(resource_path("authorizationInfo.txt"), "r", encoding="UTF-8") as f:
             filelines = f.readlines()
@@ -25,7 +26,7 @@ def showFirstWindow(authorization):
         is not None
     ):
         menu.form.helloMessage.setText(
-            f'Hello, {translit(filelines[2], "ru", reversed=True)}'
+            f'Hello, {translator.translate(filelines[2], dest="en").text.replace("Venediktov Rafael Vladimirovich","Venediktov Rafail Vladimirovich")}'
         )
         menu.show()
     else:
