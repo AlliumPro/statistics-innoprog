@@ -31,21 +31,21 @@ class Authorization(Window):
             dlg.setIcon(QMessageBox.Icon.Warning)
             dlg.exec()
 
-    def callForAccess(self):
-        if len(self.form.textPassword.text()) < 6:
-            dlg = QMessageBox()
-            dlg.setWindowTitle("Error")
-            dlg.setText("Your password must be at least 6 symbols")
-            dlg.setStandardButtons(QMessageBox.StandardButton.Ok)
-            dlg.setIcon(QMessageBox.Icon.Critical)
-            dlg.exec()
-        else:
-            dlg = QMessageBox()
-            dlg.setWindowTitle("Success")
-            dlg.setText("Your data was sent for a check")
-            dlg.setStandardButtons(QMessageBox.StandardButton.Ok)
-            dlg.setIcon(QMessageBox.Icon.Information)
-            dlg.exec()
+    # def callForAccess(self):
+    #     if len(self.form.textPassword.text()) < 6:
+    #         dlg = QMessageBox()
+    #         dlg.setWindowTitle("Error")
+    #         dlg.setText("Your password must be at least 6 symbols")
+    #         dlg.setStandardButtons(QMessageBox.StandardButton.Ok)
+    #         dlg.setIcon(QMessageBox.Icon.Critical)
+    #         dlg.exec()
+    #     else:
+    #         dlg = QMessageBox()
+    #         dlg.setWindowTitle("Success")
+    #         dlg.setText("Your data was sent for a check")
+    #         dlg.setStandardButtons(QMessageBox.StandardButton.Ok)
+    #         dlg.setIcon(QMessageBox.Icon.Information)
+    #         dlg.exec()
 
         # Authorization.database[
         #     self.form.textLogin.text()

@@ -18,6 +18,9 @@ class Database:
         )
         self.cursor = self.db.cursor()
 
+    def getAdmins(self):
+        return list(map(int, (os.getenv("ADMINIDS").split(', '))))
+
     def getAttendance(self, dateFrom: datetime.date, dateTo: datetime.date):
         self.cursor.execute("SELECT id, username, last_visit FROM client;")
         result = self.cursor.fetchall()
@@ -81,6 +84,10 @@ class Database:
             self.cursor.execute(f"SELECT name FROM teacher WHERE id={teacher[0]};")
             teachers.append(self.cursor.fetchone()[0])
         return teachers
+
+    def getTeacher(self, id):
+        self.cursor.execute(f"SELECT name  FROM teacher WHERE id={int(id[:-1])};")
+        return self.cursor.fetchone()[0]
 
     def getOfficeHoursByTeacher(self, teacher, month=None, year=None):
         self.cursor.execute(

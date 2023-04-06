@@ -4,6 +4,7 @@ from Codes.Attendance import Attendance
 from Codes.Authorization import Authorization
 from Codes.Menu import Menu
 from Codes.OfficeHours import OfficeHours
+from Codes.OfficeHoursStaff import OfficeHoursStaff
 from Codes.Payments import Payments
 from Codes.path import resource_path
 
@@ -36,6 +37,7 @@ def createWindows():
     authorization = Authorization()
     payments = Payments()
     officeHours = OfficeHours()
+    officeHoursStaff = OfficeHoursStaff()
     return authorization
 
 

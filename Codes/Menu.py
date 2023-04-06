@@ -21,7 +21,11 @@ class Menu(Window):
         self.hide()
 
     def showOfficeHours(self):
-        Window.windows["OfficeHours"]["window"].show()
+        if int(open('authorizationInfo.txt','r',encoding='UTF-8').readlines()[1]) in Window.db.getAdmins():
+            Window.windows["OfficeHours"]["window"].show()
+        else:
+            Window.windows["OfficeHoursStaff"]["window"].show()
+            Window.windows["OfficeHoursStaff"]["object"].mainMethod()
         self.hide()
 
     def logOut(self):
